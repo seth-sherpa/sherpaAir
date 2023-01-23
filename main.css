@@ -45,6 +45,7 @@ a {
 .btn:hover,
 .btn:focus,
 .btn:hover {
+    color: #ffffff;
     background-color: rgba(32, 110, 232, 0.5);
     border-color: rgba(32, 110, 232, 0.5);
 }
