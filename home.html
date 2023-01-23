@@ -14,7 +14,7 @@
 
 	</head>
     
-	<body>
+	<body onload="getTodaysDate()">
 
 		<nav class="navbar navbar-expand-md">
 			<a class="navbar-brand" href="home.html">
@@ -69,14 +69,14 @@
 			<div class="flight-menu form">
 				<div class="form-row">
 					<div class="col">
-						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="tripTypeRadios" id="oneWayRadio" value="option1" checked>
+						<div class="form-check" onclick="document.getElementById('returnDate').disabled = true;document.getElementById('arrows').textContent='arrow_right_alt';document.getElementById('oneWayRadio').checked = true;">
+						  <input class="form-check-input" type="radio" name="tripTypeRadios" id="oneWayRadio" value="option1">
 						  <label class="form-check-label" for="exampleRadios1">One way</label>
 						</div>
 					</div>
 					<div class="col">
-						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="tripTypeRadios" id="roundTripRadio" value="option2">
+						<div class="form-check" onclick="document.getElementById('returnDate').disabled = false;document.getElementById('arrows').textContent='swap_horiz';document.getElementById('roundTripRadio').checked = true;">
+						  <input class="form-check-input" type="radio" name="tripTypeRadios" id="roundTripRadio" value="option2" checked>
 						  <label class="form-check-label" for="exampleRadios2">Round trip</label>
 						</div>
 					</div>
@@ -97,6 +97,9 @@
 								<option>Ottawa</option>
 						    </select>
 						</div>
+					</div>
+					<div style="width: 24px;">
+						<span style="padding-top: 40px;" id="arrows" class="material-icons">swap_horiz</span>
 					</div>
 					<div class="col">
 						<div class="form-group">
@@ -119,12 +122,13 @@
 		   			<div class="col">
 						<div class="form-group">
 							<label class="control-label" for="date">Return</label>
-							<input type="date" id="returnDsate" name="trip-start" max="2024-12-31">
+							<input type="date" id="returnDate" name="trip-start" max="2024-12-31">
 						</div>
 					</div>
 				</div>
 			<button class="btn" type="button">Search
-				<span class="material-icons">search</span>
+				<span class="material-icons">search
+				</span>
 			</button>
 			</div>
 		</header>
