@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <title>sherpa°AIR Homepage</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
       	
+      	<!--Bootstrap, custom CSS, Material Icons--> 
       	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
       	<link rel="stylesheet" type="text/css" href="main.css">
-
       	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 	</head>
     
+    <!--custom onLoad function gets today's date and put the dates in the date selector fields--> 
 	<body onload="getTodaysDate()">
 
+		<!--Navigation Bar Start--> 	
 		<nav class="navbar navbar-expand-md">
+
+			<!--brand logo (top left)--> 
 			<a class="navbar-brand" href="home.html">
 				<img src='logos/1.primary%20logo/on-dark%20backgrounds/sherpa-logo-ondark.png' width='20%' height='20%'></img>
 			</a>
+
+			<!--toggle navigation bar button--> 
 			<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+
+			<!--main navigation bar contents--> 
 			<div class="collapse navbar-collapse" id="main-navigation">
+
+				<!--navigation bar buttons and links--> 
 				<ul class="navbar-nav">
+					
+					<!--navigation bar "Flights" button--> 
 					<li class="nav-item">
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Flights</button>
@@ -35,6 +44,8 @@
 							</div>
 						</div>
 					</li>
+
+					<!--navigation bar "Hotels" button--> 
 					<li class="nav-item">
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hotels</button>
@@ -45,6 +56,8 @@
 							</div>
 						</div>
 					</li>
+
+					<!--navigation bar "Cars" button--> 
 					<li class="nav-item">
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cars</button>
@@ -55,6 +68,8 @@
 							</div>
 						</div>
 					</li>
+
+					<!--navigation bar "Offers" button--> 
 					<li class="nav-item">
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offers</button>
@@ -65,6 +80,8 @@
 							</div>
 						</div>
 					</li>
+
+					<!--navigation bar "More" button--> 
 					<li class="nav-item">
 						<div class="dropdown">
 							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</button>
@@ -74,39 +91,63 @@
 							    <a class="dropdown-item" href="#">Action 3</a>
 							</div>
 						</div>
-					</li>										
+					</li>	
+
+					<!--navigation bar "About" link--> 									
 					<li class="nav-item">
 						<a class="nav-link" href="#">About</a>
 					</li>
+
+					<!--navigation bar "Contact" link--> 
 					<li class="nav-item">
 						<a class="nav-link" href="#">Contact</a>
 					</li>
+
 				</ul>
 			</div>
 		</nav>
+		<!--Navigation Bar End--> 
 
 		<header class="page-header header container-fluid">
 			<div class="overlay"></div>
+			
+			<!--Flight Search Menu Start--> 
 			<div class="flight-menu form">
+				
+				<!--Row 1: radio buttons--> 
 				<div class="form-row">
+					
+					<!--One way radio button-->
+					<!--text or radio button can be clicked to toggle-->  
+					<!--arrow icon changes on click--> 
 					<div class="col">
 						<div class="form-check" onclick="document.getElementById('returnDate').disabled = true;document.getElementById('arrows').textContent='arrow_right_alt';document.getElementById('oneWayRadio').checked = true;">
 						  <input class="form-check-input" type="radio" name="tripTypeRadios" id="oneWayRadio" value="option1">
 						  <label class="form-check-label" for="exampleRadios1">One way</label>
 						</div>
 					</div>
+					
+					<!--Round trip radio button--> 
 					<div class="col">
 						<div class="form-check" onclick="document.getElementById('returnDate').disabled = false;document.getElementById('arrows').textContent='swap_horiz';document.getElementById('roundTripRadio').checked = true;">
 						  <input class="form-check-input" type="radio" name="tripTypeRadios" id="roundTripRadio" value="option2" checked>
 						  <label class="form-check-label" for="exampleRadios2">Round trip</label>
 						</div>
 					</div>
+
+					<!--extra columns ensure the radio buttons sit on the left side of the flight search menu-->
+					<!--surely there is a better way to do this but it works-->  
 					<div class="col"></div>
 					<div class="col"></div>
 					<div class="col"></div>
 					<div class="col"></div>
 				</div>
+
+				<!--Row 2: origin, destination, date selectors--> 
 				<div class="form-row">
+					
+					<!--origin location dropdown--> 
+					<!--will need to explore alternative way to load the dropdown with options rather than hard-coding them--> 
 					<div class="col">
 						<div class="form-group">
 						    <label for="fromLocation">From</label>
@@ -119,9 +160,13 @@
 						    </select>
 						</div>
 					</div>
+
+					<!--arrow icons--> 
 					<div style="width: 24px;">
 						<span style="padding-top: 40px;" id="arrows" class="material-icons">swap_horiz</span>
 					</div>
+
+					<!--destination location dropdown--> 
 					<div class="col">
 						<div class="form-group">
 						    <label for="toLocation">To</label>
@@ -134,12 +179,16 @@
 						    </select>
 						</div>
 					</div>
+
+					<!--departure date selector--> 
 					<div class="col">
 						<div class="form-group">
 							<label class="control-label" for="date">Depart</label>
 							<input type="date" id="departDate" name="trip-start" max="2024-12-31">
 						</div>
 					</div>
+
+					<!--return date selector--> 
 		   			<div class="col">
 						<div class="form-group">
 							<label class="control-label" for="date">Return</label>
@@ -147,25 +196,38 @@
 						</div>
 					</div>
 				</div>
-			<button class="btn" type="button">Search
-				<span class="material-icons">search</span>
-			</button>
+
+				<!--search/submit button--> 
+				<!--this will eventually be what gathers and passes flight search parameters into our booking flow--> 
+				<button class="btn" type="button">Search
+					<span class="material-icons">search</span>
+				</button>
 			</div>
 		</header>
 
+
+		<!--container for visa page and map CTAs--> 
 		<div class="container features">
 		    <div class="row">
+		    	
+		    	<!--icon--> 
 		    	<div style="width: 24px;">
 					<span style="color: #ffffff;" id="arrows" class="material-icons">post_add</span>
 				</div>
+
+				<!--visa page text and CTA--> 
 		    	<div class="col">
 		            <h3 class="feature-title">Check visa requirements</h3>
 		            <p>More then 120 countries now require visas. It's more important than ever for travellers to have the right travel documents before a trip.</p>
 		            <button class="btn">See requirements</button>
 		        </div>
+
+		        <!--icon--> 
 		        <div style="width: 24px;">
 					<span style="color: #ffffff;" id="arrows" class="material-icons">travel_explore</span>
 				</div>
+
+				<!--map text and CTA--> 
 		        <div class="col">
 		            <h3 class="feature-title">Visit the interactive travel map</h3>
 		            <p>Not sure where to go? Use the map to see which countries are open for travel and find the insipration you need to book your next trip.</p>
@@ -174,10 +236,13 @@
 		    </div>
 		</div>
 
+		<!--container for destination cards--> 
 		<div class="container features">
 			<h3 style="color: #ffffff;">Popular Destinations</h3>
 			<p>Check out amazing flight deals for some of Sherpa° Air's hottest travel destinations!</p>
 		    <div class="row">
+
+		    	<!--each card uses a custom class (destination-box), has an image, a title, and a button--> 
 		        <div class="col destination-box">
 		            <img src="images/london.jpeg" class="img-fluid">
 		            <h3 class="feature-title">London</h3>
@@ -196,7 +261,11 @@
 		            <button class="btn">Learn more</button>
 		        </div>
 		    </div>
+
+		    <!--extra row for spacing--> 
 		    <div class="row"><p></p></div>
+
+			<!--second row of cards--> 
 		    <div class="row">
 		        <div class="col destination-box">
 		            <img src="images/berlin.jpeg" class="img-fluid">
@@ -219,12 +288,9 @@
 		</div>		
 
 
-
+		<!--custom JavaScript file, jQuery--> 
 		<script src="main.js"></script>
-
 		<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="crossorigin="anonymous"></script>
-
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
 	</body>
 
