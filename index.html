@@ -9,104 +9,26 @@
       	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
       	<link rel="stylesheet" type="text/css" href="main.css">
       	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      			<!--custom JavaScript file, jQuery--> 
+		<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+		<script src="main.js"></script>
 	</head>
     
     <!--custom onLoad function gets today's date and put the dates in the date selector fields--> 
 	<body onload="getTodaysDate()">
 
-		<!--Navigation Bar Start--> 	
-		<nav class="navbar navbar-expand-md">
+		<!--Navigation bar-->
+		<div id="nav-container"></div>
 
-			<!--brand logo (top left)--> 
-			<a class="navbar-brand" href="index.html">
-				<img src='logos/1.primary%20logo/on-dark%20backgrounds/sherpa-logo-ondark.png' width='20%' height='20%'></img>
-			</a>
+		<script>
+		$(function(){
+		  $("#nav-container").load("navbar.html");
+		});
+		</script>
+		<!--end of Navigation bar-->
 
-			<!--toggle navigation bar button--> 
-			<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<!--main navigation bar contents--> 
-			<div class="collapse navbar-collapse" id="main-navigation">
-
-				<!--navigation bar buttons and links--> 
-				<ul class="navbar-nav">
-					
-					<!--navigation bar "Flights" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Flights</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>
-
-					<!--navigation bar "Hotels" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hotels</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>
-
-					<!--navigation bar "Cars" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cars</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>
-
-					<!--navigation bar "Offers" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offers</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>
-
-					<!--navigation bar "More" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="visa_page.html">Visa Requirements</a>
-							    <a class="dropdown-item" href="map_page.html">Where can I fly?</a>
-							    <a class="dropdown-item" href="https://apply.joinsherpa.com/explore">Apply for an eVisa</a>
-							</div>
-						</div>
-					</li>	
-
-					<!--navigation bar "About" link--> 									
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
-
-					<!--navigation bar "Contact" link--> 
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-
-				</ul>
-			</div>
-		</nav>
-		<!--Navigation Bar End--> 
 
 		<header class="page-header header container-fluid">
 			<div class="overlay"></div>
@@ -287,11 +209,6 @@
 		    </div>
 		</div>		
 
-
-		<!--custom JavaScript file, jQuery--> 
-		<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-		<script src="main.js"></script>
 		
 	</body>
 

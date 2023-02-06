@@ -16,4 +16,3 @@ function getTodaysDate() {
     document.getElementById("returnDate").value = returnDate;
 }
 
-
