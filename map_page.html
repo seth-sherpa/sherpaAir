@@ -16,99 +16,15 @@
     <!--custom onLoad function gets today's date and put the dates in the date selector fields--> 
 	<body>
 
-		<!--Navigation Bar Start--> 	
-		<nav class="navbar navbar-expand-md">
+		<!--navigation bar start-->
+		<div id="nav-container"></div>
 
-			<!--brand logo (top left)--> 
-			<a class="navbar-brand" href="home.html">
-				<img src='logos/1.primary%20logo/on-dark%20backgrounds/sherpa-logo-ondark.png' width='20%' height='20%'></img>
-			</a>
-
-			<!--toggle navigation bar button--> 
-			<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<!--main navigation bar contents--> 
-			<div class="collapse navbar-collapse" id="main-navigation">
-
-				<!--navigation bar buttons and links--> 
-				<ul class="navbar-nav">
-					
-					<!--navigation bar "Flights" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Flights</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>
-
-					<!--navigation bar "Hotels" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hotels</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>
-
-					<!--navigation bar "Cars" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cars</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>
-
-					<!--navigation bar "Offers" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offers</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>
-
-					<!--navigation bar "More" button--> 
-					<li class="nav-item">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</button>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">Action 1</a>
-							    <a class="dropdown-item" href="#">Action 2</a>
-							    <a class="dropdown-item" href="#">Action 3</a>
-							</div>
-						</div>
-					</li>	
-
-					<!--navigation bar "About" link--> 									
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
-
-					<!--navigation bar "Contact" link--> 
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-
-				</ul>
-			</div>
-		</nav>
-		<!--Navigation Bar End--> 
+		<script>
+		$(function(){
+		  $("#nav-container").load("navbar.html");
+		});
+		</script>
+		<!--navigation bar end--> 
 
 		<header class="page-header header container-fluid">
 			<div class="overlay"></div>
