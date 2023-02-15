@@ -87,7 +87,6 @@ a {
 
 
 .features {
-    margin: 4em auto;
     padding: 1em;
     position: relative;
 }
@@ -95,8 +94,6 @@ a {
     color: #ffffff;
     font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
 }
 .features img {
     height: 200px;
@@ -110,5 +107,5 @@ a {
 .destination-box {
     margin: 3px;
     padding: 10px;
-    border: 2px solid #ffffff;
+    border: 2px solid dimgray;
 }
