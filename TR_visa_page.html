@@ -81,23 +81,24 @@
 				<br>
 
 			</div>
-		</header>
 
+			<div id="sherpa-trip-element"></div>
 
-
-			  <div id="sherpa-trip-element"></div>
-			  <script>
+			<script>
 				const elementConfig = {
 					placement: "discovery",
 					language: "en-US"
 				}
-			
-			function onSherpaEvent(event) {
-				// Ensure that the sdk is loaded before creating the element:
-				if (event.type === 'sdkLoaded') {
-					$sherpa.V2.createElement('trip', elementConfig).mount('#sherpa-trip-element');
+
+				function onSherpaEvent(event) {
+					// Ensure that the sdk is loaded before creating the element:
+					if (event.type === 'sdkLoaded') {
+						$sherpa.V2.createElement('trip', elementConfig).mount('#sherpa-trip-element');
+					}
 				}
-			} </script>
+			</script>
+			
+		</header>
 
 	</body>
 

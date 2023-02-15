@@ -78,13 +78,6 @@ a {
     background: rgba(0, 0, 0, 0);
 }
 
-.header {
-    /*background-image: url('images/header_photo.jpg'); */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
 
 .features {
     margin: 4em auto;
