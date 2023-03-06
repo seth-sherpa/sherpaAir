@@ -1,0 +1,115 @@
+@font-face {
+    font-family: DM_Sans;
+    src: url('DM_Sans/DMSans-Regular.ttf');
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: #222426;
+    font-family: DM_Sans;
+}
+p {
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+}
+
+.flight-menu {
+    width: 50%;
+    background-color: #ffffff;
+    border: 2px solid #222426;
+    padding: 20px;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+}
+
+.navbar {
+    background:#222426;
+}
+
+.btn {
+    color: #ffffff;
+    background-color: #206EE8;
+    border-color: #206EE8;
+    box-shadow: rgba(0,0,0,0);
+}
+
+.btn-secondary:focus,
+.btn-secondary:hover,
+.show>.btn-secondary.dropdown-toggle:focus,
+.show>.btn-secondary.dropdown-toggle:active,
+.show>.btn-secondary.dropdown-toggle,
+.btn:hover,
+.btn:focus,
+.btn:hover {
+    color: #ffffff;
+    background-color: rgba(32, 110, 232, 0.5);
+    border-color: rgba(32, 110, 232, 0.5);
+}
+
+.nav-item {
+    padding-right: 15px;
+}
+
+.nav-link,
+.navbar-brand {
+    align-self: flex-start;
+    cursor: pointer; 
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+.nav-link:hover {
+    color: #206EE8;
+}
+.navbar-collapse {
+    justify-content: flex-start;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    background-image: url('images/airplane_interior.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.center {
+    color: #ffffff;
+    text-align: center;
+}
+.features {
+    padding: 1em;
+    position: relative;
+}
+
+.features img {
+    height: 200px;
+    weidth: 400px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 16px;
+}
+
+
+.callout {
+  padding: 20px;
+  color: #ffffff;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-left-color: #f0ad4e;
+  border-radius: 3px;
+}
