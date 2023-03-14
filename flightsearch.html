@@ -35,86 +35,164 @@
     <!--navigation bar end-->
     <header class="page-header header container-fluid">
       <div class="overlay"></div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
     </header>
     <br>
     <div class="container">
       <div class="row">
         <div class="col">
-          <h3 style="color:#ffffff"> Your Selected flight </h3>
+          <h3 id="flightSearchTitle" style="color:#ffffff"></h3>
         </div>
       </div>
     </div>
+
     <hr width="85%" color="dimgray">
+
     <div class="container">
-      <p> Departure </p>
+
       <div class="row">
-        <div class="col">
-          <h3 class="center" id="departureOrigin"></h3>
-          <div class="center" id="outboundDepartureDate">
-            <br>12:00:00
-          </div>
-        </div>
-        <div class="col">
-          <h4 class="center"> to </h4>
-        </div>
-        <div class="col">
-          <h3 class="center" id="departureDestination"></h3>
-          <div class="center" id="outboundArrivalDate">
-            <br>18:00:00
-          </div>
-        </div>
-      </div>
-      <div class="container" id="returnSegment">
-        <script>
-          if (getReturnDate() == 'null') {
-            document.getElementById("returnSegment").style.display = "none";
-          } else {
-            document.getElementById("returnSegment").style.display = "inline";
-          }
-        </script>
-        <hr width="85%" color="dimgray">
-        <p> Return </p>
-        <div class="row">
-          <div class="col">
-            <h3 class="center"></h3>
-            <h3 class="center" id="returnOrigin"></h3>
-            <div class="center" id="returnDepartureDate">
-              <br> 12:00:00
+        <div class="col flight-options">
+          <p> Departure </p>
+          <div class="row">
+            <div class="col">
+              <p class="center" id="departureOrigin"></p>
+              <p class="center" id="outboundDepartureDate"><br>12:00:00</p>
             </div>
-          </div>
-          <div class="col">
-            <h4 class="center"> to </h4>
-          </div>
-          <div class="col">
-            <h3 class="center" id="returnDestination"></h3>
-            <div class="center" id="returnArrivalDate">
-              <br> 18:00:00
+            <div class="col">
+              <p class="center"> to </p>
+            </div>
+            <div class="col">
+              <p class="center" id="departureDestination"></p>
+              <p class="center" id="outboundArrivalDate"><br>18:00:00</p>
             </div>
           </div>
         </div>
-      </div>
-      <hr width="85%" color="dimgray">
-    </div>
-    <div class="container">
-      <div class="callout">
-        <div class="row">
-          <div class="col">
-            <h4>Book Selected Flight</h4>
-          </div>
-          <div class="col" style="text-align: right;">
-            <button class="btn" type="button"  onclick="goHome()"> Return to Search</button>
-			<button class="btn" type="button" onclick="goToBookingConfirmation()"> Book Flight
+        <div class="col flight-options" id="returnSegment">
+          <script>
+            if (getReturnDate() == 'null') {
+              document.getElementById("returnSegment").style.display = "none";
+            } else {
+              document.getElementById("returnSegment").style.display = "inline";
+            }
+         </script>
+          <p> Return </p>
+          <div class="row">
+            <div class="col">
+              <p class="center" id="returnOrigin"></p>
+              <p class="center" id="returnDepartureDate"><br>12:00:00</p>
+            </div>
+            <div class="col">
+              <p class="center"> to </p>
+            </div>
+            <div class="col">
+              <p class="center" id="returnDestination"></p>
+              <p class="center" id="returnArrivalDate"><br>18:00:00</p>
+            </div>
           </div>
         </div>
+        <div style="padding: 5px;">
+          <button class="btn" type="button" onclick="goToBookingConfirmation()"> Book Flight
+        </div>
       </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col flight-options">
+          <p> Departure </p>
+          <div class="row">
+            <div class="col">
+              <p class="center" id="departureOrigin2"></p>
+              <p class="center" id="outboundDepartureDate2"><br>12:00:00</p>
+            </div>
+            <div class="col">
+              <p class="center"> to </p>
+            </div>
+            <div class="col">
+              <p class="center" id="departureDestination2"></p>
+              <p class="center" id="outboundArrivalDate2"><br>18:00:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col flight-options" id="returnSegment2">
+          <script>
+            if (getReturnDate() == 'null') {
+              document.getElementById("returnSegment2").style.display = "none";
+            } else {
+              document.getElementById("returnSegment2").style.display = "inline";
+            }
+         </script>
+          <p> Return </p>
+          <div class="row">
+            <div class="col">
+              <p class="center" id="returnOrigin2"></p>
+              <p class="center" id="returnDepartureDate2"><br>12:00:00</p>
+            </div>
+            <div class="col">
+              <p class="center"> to </p>
+            </div>
+            <div class="col">
+              <p class="center" id="returnDestination2"></p>
+              <p class="center" id="returnArrivalDate2"><br>18:00:00</p>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 5px;">
+          <button class="btn" type="button" onclick="goToBookingConfirmation()"> Book Flight
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col flight-options">
+          <p> Departure </p>
+          <div class="row">
+            <div class="col">
+              <p class="center" id="departureOrigin3"></p>
+              <p class="center" id="outboundDepartureDate3"><br>12:00:00</p>
+            </div>
+            <div class="col">
+              <p class="center"> to </p>
+            </div>
+            <div class="col">
+              <p class="center" id="departureDestination3"></p>
+              <p class="center" id="outboundArrivalDate3"><br>18:00:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col flight-options" id="returnSegment3">
+          <script>
+            if (getReturnDate() == 'null') {
+              document.getElementById("returnSegment3").style.display = "none";
+            } else {
+              document.getElementById("returnSegment3").style.display = "inline";
+            }
+         </script>
+          <p> Return </p>
+          <div class="row">
+            <div class="col">
+              <p class="center" id="returnOrigin3"></p>
+              <p class="center" id="returnDepartureDate3"><br>12:00:00</p>
+            </div>
+            <div class="col">
+              <p class="center"> to </p>
+            </div>
+            <div class="col">
+              <p class="center" id="returnDestination3"></p>
+              <p class="center" id="returnArrivalDate3"><br>18:00:00</p>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 5px;">
+          <button class="btn" type="button" onclick="goToBookingConfirmation()"> Book Flight
+        </div>
+      </div>
+
+      <br>
+
+      <button class="btn" type="button"  onclick="goHome()"> Return to Search</button>
     </div>
+          
+            
   </body>
 </html>

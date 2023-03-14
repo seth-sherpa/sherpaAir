@@ -113,3 +113,7 @@ a {
   border-left-color: #f0ad4e;
   border-radius: 3px;
 }
+
+.flight-options {
+    border: 2px solid dimgray;
+}
